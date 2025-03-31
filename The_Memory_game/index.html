@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>The Memory game</title>
+</head>
+<body>
+    <div class="controls">
+        <label for="width">Width: <input type="number" id="width" min="4" max="12" value="4"></label>
+        <label for="height">Height: <input type="number" id="height" min="3" max="6" value="3"></label>
+        <button id="startButton" class="button-success">Start</button>
+    </div>
+    <div id="board" class="board"></div>
+    <div class="win-message">Congratulations, you win!</div>
+</body>
+</html>
