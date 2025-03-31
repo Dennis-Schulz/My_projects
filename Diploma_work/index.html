@@ -7,5 +7,456 @@
     <link rel="stylesheet" href="styles/index_style.css" />
   </head>
   <body>
+    <header class="header container">
+      <a href="/" class="header-logo">
+        <img
+          src="./images/logo.png"
+          alt="meetup-logo"
+          class="header-logo-image"
+          width="95"
+          height="34"
+          loading="lazy"
+        />
+      </a>
+      <div class="header-menu-left">
+        <input
+          type="text"
+          class="header-menu-search-left"
+          placeholder="Search events"
+        />
+        <input
+          type="text"
+          class="header-menu-search-right"
+          placeholder="Mountain View, CA"
+        />
+        <button class="header-menu-search-button">
+          <img
+            src="./icons/search.png"
+            alt="search-icon"
+            width="15"
+            height="15"
+            loading="lazy"
+          />
+        </button>
+      </div>
+      <div class="header-menu-right">
+        <a href="/" class="header-menu-link">
+          <img
+            src="./icons/language.png"
+            alt="language-icon"
+            width="17"
+            height="17"
+            loading="lazy"
+          />
+          English</a
+        >
+        <a href="/" class="header-menu-link">Log in</a>
+        <a href="/" class="header-menu-link">Sign up</a>
+      </div>
+    </header>
+    <main>
+      <div class="container-join-meetup container">
+        <div class="container-join-meetup-left">
+          <h1>The people platform—Where interests become friendships</h1>
+          <p>
+            Whatever your interest, from hiking and reading to networking and
+            skill sharing, there are thousands of people who share it on Meetup.
+            Events are happening every day—sign up to join the fun.
+          </p>
+          <button>Join Meetup</button>
+        </div>
+        <div class="container-join-meetup-right">
+          <img src="./images/irl_event.svg.png" alt="The people platform" />
+        </div>
+      </div>
+      <div class="container-events-near-header container">
+        <span class="events-title">Events near</span>
+        <div class="location">
+          <span class="location-text">Mountain View, CA</span>
+          <span class="edit-icon">✎</span>
+        </div>
+        <a href="#" class="see-all">See all events</a>
+      </div>
+      <div class="container-events-near-grid container">
+        <div class="grid-item">
+          <img src="images/group-cover-10-wide.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>Day Trading Idea and Strategy</h2>
+            <p>Business (5 km)</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Mon, Mar 18 · 7:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />1 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/event_519345287.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>Let's Talk Networking: JPMorgan Chase in Palo Alto</h2>
+            <p>Business (25 km)</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Tue, Mar 19 · 5:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />41 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/event_519446442.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>
+              Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use
+              Cases
+            </h2>
+            <p>Technology</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Wed, Mar 13 · 6:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />40 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/event_519596732.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>INFORMS San Francisco Chapter In-Person Event</h2>
+            <p>Health and Wellbeing (50 km)</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Thu, Mar 28 · 5:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />41 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/event_518548420.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>AI Wednesdays - Meet and Greet!</h2>
+            <p>Technology (5 km)</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Wed, Mar 13 · 6:30 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />29 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/event_519616239.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>ROS By-The-Bay March 2024</h2>
+            <p>Social Activities</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Thu, Mar 21 · 6:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />51 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/event_519189715.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>Free Christian Singles' Dinner</h2>
+            <p>Hobbies and Passions (10 km)</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Fri, Mar 29 · 6:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />11 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/event_519614558.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>In-person: Deep Dive into RAG Architectures (Food served)</h2>
+            <p>Hobbies and Passions (50 km)</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Thu, Mar 14 · 5:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />16 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container-events-near-header container margin-header">
+        <span class="events-title">Upcoming online events</span>
+        <a href="#" class="see-all">See all events</a>
+      </div>
+      <div class="container-online-events-grid container">
+        <div class="grid-item">
+          <img src="images/event_519688853.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>
+              Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers
+            </h2>
+            <p>Business (25 km)</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Thu, Mar 14 · 6:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />3 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/272x153.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>Vision Pro Developers Online Meetup</h2>
+            <p>Technology</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Wed, Mar 13 · 7:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />51 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/event_519453986.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>Significant Musical Moments</h2>
+            <p>Hobbies and Passions (10 km)</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Wed, Mar 13 · 6:00 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />16 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="images/event_518832943.webp.png" alt="picture" />
+          <div class="grid-item-text">
+            <h2>FREE Webinar : Introduction to Power BI</h2>
+            <p>Technology</p>
+            <p>
+              <img src="./icons/date.svg" alt="date" />Thu, Mar 14 · 5:30 PM PDT
+            </p>
+            <p>
+              <img src="./icons/yes.svg" alt="yes" />33 going
+              <img src="./icons/ticket.svg" alt="ticket" /> Free
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="new-container-join-meetup container">
+        <div class="new-container-join-meetup-left">
+          <h2>Join Meetup</h2>
+          <p>
+            People use Meetup to meet new people, learn new things, find
+            support, get out of their comfort zones, and pursue their passions,
+            together. Membership is free.
+          </p>
+          <button>Sign up</button>
+        </div>
+        <img src="./images/image.png" alt="picture" />
+      </div>
+      <div class="container-explore-top-categories container">
+        <h2>Explore top categories</h2>
+        <div class="explore-top-categories">
+          <div>
+            <img src="./images/Vector.png" alt="picture" />
+            <p>Travel and Outdoor</p>
+          </div>
+          <div>
+            <img src="./images/Vector (1).png" alt="picture" />
+            <p>Social Activities</p>
+          </div>
+          <div>
+            <img src="./images/Vector (2).png" alt="picture" />
+            <p>Hobbies and Passions</p>
+          </div>
+          <div>
+            <img src="./images/Vector (3).png" alt="picture" />
+            <p>Sports and Fitness</p>
+          </div>
+          <div>
+            <img src="./images/Vector (4).png" alt="picture" />
+            <p>Health and Wellbeing</p>
+          </div>
+          <div>
+            <img src="./images/Vector (5).png" alt="picture" />
+            <p>Technology</p>
+          </div>
+          <div>
+            <img src="./images/Vector (6).png" alt="picture" />
+            <p>Art and Culture</p>
+          </div>
+          <div>
+            <img src="./images/Vector (7).png" alt="picture" />
+            <p>Games</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-popular-cities container">
+        <h2>Popular cities on Meetup</h2>
+        <p>
+          Looking for fun things to do near you? See what Meetup organizers are
+          planning in cities around the country.
+        </p>
+        <div class="container-popular-cities-categories">
+          <div>
+            <img src="./images/new_york.webp.png" alt="picture" />
+            <p>New York</p>
+          </div>
+          <div>
+            <img src="./images/san_francisco.webp.png" alt="picture" />
+            <p>San Francisco</p>
+          </div>
+          <div>
+            <img src="./images/chicago.webp.png" alt="picture" />
+            <p>Chicago</p>
+          </div>
+          <div>
+            <img src="./images/nashville.webp.png" alt="picture" />
+            <p>Nashville</p>
+          </div>
+          <div>
+            <img src="./images/miami.webp.png" alt="picture" />
+            <p>Miami</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-how-meetup-works container">
+        <h2>How Meetup works</h2>
+        <div class="how-meetup-works-container">
+          <div class="how-meetup-works-container-content">
+            <div><img src="./icons/search.svg" alt="picture" /></div>
+            <div>
+              <h3>Discover events and groups</h3>
+              <p>See who's hosting local events for all the things you love</p>
+              <a href="#">Search events and groups</a>
+            </div>
+          </div>
+          <div class="how-meetup-works-container-content">
+            <div><img src="./icons/plus.svg" alt="picture" /></div>
+            <div>
+              <h3>Start a group to host events</h3>
+              <p>
+                Create your own Meetup group, and draw from a community of
+                millions
+              </p>
+              <a href="#">Start a group</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-friendships container">
+        <h2>Friendships are made on Meetup</h2>
+        <p class="container-friendships-p">
+          Since 2002, members have used Meetup to make new friends, meet
+          like-minded people, spend time on hobbies, and connect with locals
+          over shared interests. Learn how.
+        </p>
+        <div class="container-friendships-content">
+          <div>
+            <img src="./images/first_article.webp.png" alt="picture" />
+            <h3>I Used Meetup to Make Friends at Brunch</h3>
+            <p>
+              New Jersey-based writer and college student Brianna Stryker wanted
+              to meet friends in her hometown. Learn how she used Meetup to make
+              connections by joining a Girls Night Out Meetup group.
+            </p>
+            <a href="#">Read more</a>
+          </div>
+          <div>
+            <img src="./images/second_article.webp.png" alt="picture" />
+            <h3>How to Turn Casual Connections into Close Friendships</h3>
+            <p>
+              It’s proven that close friendships are harder to make as an adult.
+              But don’t sweat it: here’s what you can do to simplify the
+              process.
+            </p>
+            <a href="#">Read more</a>
+          </div>
+          <div>
+            <img src="./images/third_article.webp.png" alt="picture" />
+            <h3>Do You Have the “Right” Number of Friends?</h3>
+            <p>
+              Studies from around the world have tried to help people answer
+              this question. Learn about the three tiers of friendship and how
+              to fulfill them.
+            </p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-container container">
+      <div class="footer-start container">
+        <p>Create your own Meetup group.</p>
+        <p class="get-started">Get Started</p>
+      </div>
+      <div class="footer-content container">
+        <div>
+          <H3>Your Account</H3>
+          <a href="#">Sign up</a>
+          <a href="#">Log in</a>
+          <a href="#">Help</a>
+          <a href="#">Become an Affiliate</a>
+        </div>
+        <div>
+          <h3>Discover</h3>
+          <a href="#">Groups</a>
+          <a href="#">Calendar</a>
+          <a href="#">Topics</a>
+          <a href="#">Cities</a>
+          <a href="#">Online Events</a>
+          <a href="#">Local Guides</a>
+          <a href="#">Make Friends</a>
+        </div>
+        <div>
+          <h3>Meetup</h3>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Meetup Pro</a>
+          <a href="#">Careers</a>
+          <a href="#">Apps</a>
+          <a href="#">Podcast</a>
+        </div>
+      </div>
+      <h3 class="container">Follow us</h3>
+      <div class="footer-logo container">
+        <div>
+          <img class="footer-logo-img" src="images/facebook.png" alt="picture">
+          <img class="footer-logo-img" src="images/twitter.png" alt="picture">
+          <img class="footer-logo-img" src="images/youtube.png" alt="picture">
+          <img class="footer-logo-img" src="images/instagram.png" alt="picture">
+          <img class="footer-logo-img" src="images/tic-toc.png" alt="picture">
+        </div>
+        <div>
+          <img class="footer-logo-img-big" src="images/Google.png" alt="picture">
+          <img class="footer-logo-img-big" src="images/App Store.png" alt="picture">
+        </div>
+      </div>
+      <div class="footer-end container">
+        <p>© 2024 Meetup</p>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Do Not Sell or Share My Personal Data</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Help</a>
+      </div>
+      </footer>
   </body>
 </html>
