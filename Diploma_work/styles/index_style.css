@@ -10,35 +10,35 @@ a {
 
 @font-face {
   font-family: "Roboto";
-  src: url(./fonts/Roboto-Light.woff2) format("woff2");
+  src: url(../fonts/Roboto-Light.woff2) format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(./fonts/Roboto-Regular.woff2) format("woff2");
+  src: url(../fonts/Roboto-Regular.woff2) format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(./fonts/RobotoSemiCondensed-Medium.woff2) format("woff2");
+  src: url(../fonts/RobotoSemiCondensed-Medium.woff2) format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(./fonts/Roboto-SemiBold.woff2) format("woff2");
+  src: url(../fonts/Roboto-SemiBold.woff2) format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url(./fonts/Roboto-Bold.woff2) format("woff2");
+  src: url(../fonts/Roboto-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -86,7 +86,7 @@ body {
   border-radius: 8px 0 0 8px;
   border: 1px solid #D9D9D9;
   text-indent: 40px;
-  background: url(./icons/search-gray.svg) no-repeat 16px center;
+  background: url(../icons/search-gray.svg) no-repeat 16px center;
 }
 
 .header-menu-search-right {
