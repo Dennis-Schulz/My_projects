@@ -1,0 +1,774 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/RobotoSemiCondensed-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./fonts/Roboto-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #FFFFFF;
+  color: #212121;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  min-width: 393px;
+  max-width: 1920px;
+}
+
+.container {
+  max-width: 1245px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.header {
+  max-width: 1591px;
+  height: 64px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 60px;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-menu-left {
+  display: flex;
+}
+
+.header-menu-search-left {
+  height: 42px;
+  min-width: 300px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #D9D9D9;
+  text-indent: 40px;
+  background: url(./icons/search-gray.svg) no-repeat 16px center;
+}
+
+.header-menu-search-right {
+  height: 42px;
+  width: 254px;
+  border: 1px solid #D9D9D9;
+  text-indent: 20px;
+}
+
+.header-menu-search-button {
+  height: 46px;
+  width: 42px;
+  border-radius: 0 8px 8px 0;
+  background: #f65858;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header-menu-right {
+  height: 42px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 43%;
+  padding-inline: 20px;
+}
+
+.header-menu-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 83px;
+  height: 36px;
+  color: #212121;
+  gap: 5px;
+}
+.header-menu-link:hover {
+  background-color: #00798A;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.container-join-meetup {
+  height: 461px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 6%;
+}
+
+.container-join-meetup-left, .new-container-join-meetup-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+.container-join-meetup-left h1, .new-container-join-meetup-left h1 {
+  margin: 0;
+  font-size: 2.625rem;
+  line-height: 3.25rem;
+  font-weight: 700;
+}
+.container-join-meetup-left p, .new-container-join-meetup-left p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.container-join-meetup-left button, .new-container-join-meetup-left button {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  background-color: #00798A;
+  color: #FFFFFF;
+  border-radius: 8px;
+  width: 125px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+}
+
+.container-join-meetup-right img {
+  width: 378px;
+  height: 269px;
+  padding-right: 15px;
+}
+
+.container-events-near-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 25px;
+  margin-top: 20px;
+}
+
+.events-title {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(151, 202, 209, 0.0784313725);
+  padding: 6px 10px;
+  color: #00798A;
+  border-radius: 8px;
+}
+.location span {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+.edit-icon {
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.see-all {
+  margin-left: auto;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #00798A;
+}
+
+.container-events-near-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 36px;
+}
+
+.container-online-events-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 36px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+}
+.grid-item .grid-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.grid-item h2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+.grid-item p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #707070;
+}
+
+.new-container-join-meetup {
+  margin-top: 40px;
+  background: rgba(151, 202, 209, 0.0784313725);
+  height: 236px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 10%;
+  border-style: 1px solid #D9D9D9;
+}
+
+.new-container-join-meetup-left button {
+  background-color: #E32359;
+  width: 192px;
+  height: 40px;
+}
+
+.container-explore-top-categories {
+  margin-top: 64px;
+}
+.container-explore-top-categories h2 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.explore-top-categories {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.explore-top-categories div {
+  cursor: pointer;
+  margin-top: 24px;
+  width: 135px;
+  height: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 8px;
+  background-color: rgba(151, 202, 209, 0.0784313725);
+}
+.explore-top-categories div p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.container-popular-cities {
+  margin-top: 64px;
+}
+.container-popular-cities h2 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.container-popular-cities p {
+  margin-top: 16px;
+  margin-bottom: 28px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #707070;
+}
+
+.container-popular-cities-categories {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container-popular-cities-categories p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container-how-meetup-works {
+  margin-top: 64px;
+}
+.container-how-meetup-works h2 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+
+.how-meetup-works-container {
+  display: flex;
+  gap: 32px;
+}
+
+.how-meetup-works-container-content {
+  margin-top: 24px;
+  display: flex;
+  max-width: 580px;
+  min-width: 400px;
+  width: 50%;
+  height: 180px;
+  background-color: rgba(151, 202, 209, 0.0784313725);
+  padding-top: 32px;
+  padding-left: 24px;
+  gap: 32px;
+  border-radius: 8px;
+}
+.how-meetup-works-container-content div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.how-meetup-works-container-content div h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+.how-meetup-works-container-content div p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.how-meetup-works-container-content div a {
+  color: #00798A;
+}
+
+.container-friendships {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.container-friendships h2 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.container-friendships p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #707070;
+}
+
+.container-friendships-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.container-friendships-content div {
+  cursor: pointer;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.container-friendships-content div h2 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+.container-friendships-content div p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #707070;
+}
+.container-friendships-content div a {
+  color: #00798A;
+}
+
+.footer-container {
+  margin-top: 40px;
+  max-width: 1591px;
+  background-color: #212121;
+  height: 559px;
+}
+.footer-container a {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #C5C4C4;
+}
+.footer-container h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.footer-container p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.footer-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  height: 10%;
+  padding-block: 40px;
+}
+
+.get-started {
+  border: 2px solid #FFFFFF;
+  border-radius: 6px;
+  padding-inline: 14px;
+  padding-block: 6px;
+}
+
+.footer-content {
+  border-top: 1px solid #707070;
+  display: flex;
+  justify-content: flex-start;
+  height: 57%;
+  gap: 26%;
+}
+.footer-content div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 32px;
+}
+
+.footer-logo-img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.footer-logo-img-big {
+  width: 135px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.footer-logo {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 55%;
+  height: 10%;
+}
+.footer-logo div {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-end {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4%;
+  height: 10%;
+}
+
+@media screen and (max-width: 1030px) {
+  .header-menu-search-right {
+    display: none;
+  }
+  .container-events-near-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .container-online-events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .explore-top-categories {
+    justify-content: flex-start;
+  }
+  .footer-logo-img-big {
+    display: none;
+  }
+}
+@media screen and (max-width: 760px) {
+  .header-menu-left {
+    position: absolute;
+    top: 7%;
+    left: 3%;
+  }
+  .header-menu-right {
+    width: 80%;
+  }
+  .container-join-meetup-left h1, .new-container-join-meetup-left h1 {
+    font-size: 1.563rem;
+    line-height: 1.938rem;
+    font-weight: 700;
+  }
+  .container-join-meetup-left h1, .new-container-join-meetup-left h1 {
+    font-size: 1.563rem;
+    line-height: 1.938rem;
+    font-weight: 700;
+  }
+  .container-join-meetup-left p, .new-container-join-meetup-left p {
+    font-size: 0.75rem;
+    line-height: 1.063rem;
+    font-weight: 400;
+  }
+  .header-menu-right a {
+    font-size: 0.75rem;
+    line-height: 1.063rem;
+    font-weight: 400;
+  }
+  .container-join-meetup-right img {
+    width: 215px;
+    height: 152px;
+  }
+  .container-join-meetup {
+    height: 430px;
+  }
+  .see-all {
+    display: none;
+  }
+  .container-events-near-grid {
+    place-items: normal;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+  .container-online-events-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .grid-item {
+    flex-direction: row;
+    padding-top: 20px;
+    border-top: 1px solid #707070;
+  }
+  .margin-header {
+    margin-top: 60px;
+  }
+  .events-title {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+  }
+  .container-popular-cities-categories div img {
+    width: 153px;
+    height: 153px;
+  }
+  .container-popular-cities-categories div:nth-last-child(1) {
+    display: none;
+  }
+  .how-meetup-works-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .how-meetup-works-container div {
+    gap: 10px;
+  }
+  .how-meetup-works-container-content {
+    height: 112px;
+    padding-top: 19px;
+    padding-left: 14px;
+  }
+  .how-meetup-works-container-content div h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    font-weight: bold;
+  }
+  .how-meetup-works-container-content div p {
+    font-size: 0.75rem;
+    line-height: 1.063rem;
+    font-weight: 400;
+  }
+  .how-meetup-works-container-content div a {
+    font-size: 0.75rem;
+    line-height: 1.063rem;
+    font-weight: 400;
+    color: #00798A;
+  }
+  .how-meetup-works-container-content div img {
+    width: 25px;
+    height: 25px;
+  }
+  .container-friendships h2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+  }
+  .container-friendships-p {
+    display: none;
+  }
+  .container-friendships-content {
+    justify-content: center;
+  }
+  .container-friendships-content div {
+    max-width: 100%;
+  }
+  .container-friendships-content div h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    font-weight: bold;
+  }
+  .container-friendships-content div p {
+    font-size: 0.75rem;
+    line-height: 1.063rem;
+    font-weight: 400;
+  }
+  .container-friendships-content div a {
+    font-size: 0.75rem;
+    line-height: 1.063rem;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 550px) {
+  .grid-item {
+    height: 100px;
+  }
+  .grid-item img {
+    width: 165px;
+    height: 92px;
+  }
+  .grid-item .grid-item-text {
+    gap: 5px;
+  }
+  .grid-item h2 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+  }
+  .grid-item p {
+    font-size: 0.75rem;
+    line-height: 1.063rem;
+    font-weight: 400;
+  }
+  .grid-item p img {
+    width: 16px;
+    height: auto;
+  }
+  .new-container-join-meetup {
+    position: relative;
+    flex-direction: column;
+    height: 340px;
+  }
+  .new-container-join-meetup img {
+    position: absolute;
+    width: 238px;
+    height: 136px;
+    left: 20%;
+    top: 60px;
+  }
+  .new-container-join-meetup-left {
+    align-items: center;
+    width: 100%;
+  }
+  .new-container-join-meetup-left P {
+    text-align: left;
+    margin-top: 140px;
+  }
+  .new-container-join-meetup-left h2 {
+    width: 100%;
+    text-align: left;
+  }
+  .footer-end a {
+    display: none;
+  }
+}
+@media screen and (max-width: 470px) {
+  .container-join-meetup {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 400px;
+    height: 370px;
+    gap: 20px;
+    padding-inline: 0;
+  }
+  .container-join-meetup-left button, .new-container-join-meetup-left button {
+    display: none;
+  }
+  .events-title {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+  }
+  .location span {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+  }
+  .container-join-meetup-left, .new-container-join-meetup-left {
+    width: 100%;
+  }
+  .container-join-meetup-right {
+    width: 100%;
+    text-align: center;
+  }
+  .new-container-join-meetup-left button {
+    display: block;
+  }
+  .explore-top-categories {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=index_style.css.map */

@@ -1,0 +1,707 @@
+@import "_variables.scss";
+@import "_normalise.scss";
+@import "_fonts.scss";
+@import "_mixins.scss";
+
+body {
+  font-family: $font-family-base;
+  background-color: $color-light;
+  color: $color-dark;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  min-width: 393px;
+  max-width: 1920px;
+}
+
+.container {
+  max-width: $container-width;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: $container-padding;
+}
+
+.header {
+  max-width: calc($container-width + 316px + ($container-padding) * 2);
+  height: 64px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 60px;
+}
+
+.header-logo {
+  @include flex-center;
+}
+
+.header-menu-left {
+  display: flex;
+}
+
+.header-menu-search-left {
+  height: $input-height;
+  min-width: 300px;
+  border-radius: $border-radius 0 0 $border-radius;
+  border: $input-border;
+  text-indent: 40px;
+  background: url(./icons/search-gray.svg) no-repeat 16px center;
+}
+
+.header-menu-search-right {
+  height: $input-height;
+  width: 254px;
+  border: $input-border;
+  text-indent: 20px;
+}
+
+.header-menu-search-button {
+  height: $input-height + 4px;
+  width: $input-height;
+  border-radius: 0 $border-radius $border-radius 0;
+  background: #f65858;
+  border: none;
+  @include flex-center;
+  cursor: pointer;
+}
+
+.header-menu-right {
+  height: $input-height;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 43%;
+  padding-inline: 20px;
+}
+
+.header-menu-link {
+  @include flex-center;
+  @include font14;
+  width: 83px;
+  height: 36px;
+  color: $color-dark;
+  gap: 5px;
+  &:hover {
+    background-color: $color-button-green;
+    border-radius: $border-radius;
+    color: $color-light;
+  }
+}
+
+.container-join-meetup {
+  height: 461px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 6%;
+}
+.container-join-meetup-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  h1 {
+    margin: 0;
+    @include font42;
+  }
+  p {
+    margin: 0;
+    @include font16;
+  }
+  button {
+    @include font16;
+    background-color: $color-button-green;
+    color: $color-light;
+    border-radius: $border-radius;
+    width: 125px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+  }
+}
+
+.container-join-meetup-right {
+  img {
+    width: 378px;
+    height: 269px;
+    padding-right: 15px;
+  }
+}
+
+.container-events-near-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 25px;
+  margin-top: 20px;
+}
+
+.events-title {
+  @include font28;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  background-color: $color-light-green;
+  padding: 6px 10px;
+  color: $color-button-green;
+  border-radius: $border-radius;
+  span {
+    @include font20;
+  }
+}
+
+.edit-icon {
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.see-all {
+  margin-left: auto;
+  @include font16;
+  color: $color-button-green;
+}
+
+.container-events-near-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 36px;
+}
+
+.container-online-events-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 36px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+
+  .grid-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  h2 {
+    @include font20;
+  }
+  p {
+    @include font14;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: $color-dark-grey;
+  }
+}
+
+.new-container-join-meetup {
+  margin-top: 40px;
+  background: $color-light-green;
+  height: 236px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 10%;
+  border-style: $input-border;
+}
+
+.new-container-join-meetup-left {
+  @extend .container-join-meetup-left;
+  button {
+    background-color: $color-button-red;
+    width: 192px;
+    height: 40px;
+  }
+}
+
+.container-explore-top-categories {
+  margin-top: 64px;
+  h2 {
+    @include font28;
+  }
+}
+
+.explore-top-categories {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  div {
+    cursor: pointer;
+    margin-top: 24px;
+    width: 135px;
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: $border-radius;
+    background-color: $color-light-green;
+    p {
+      @include font16;
+      text-align: center;
+    }
+  }
+}
+
+.container-popular-cities {
+  margin-top: 64px;
+  h2 {
+    @include font28;
+  }
+  p {
+    margin-top: 16px;
+    margin-bottom: 28px;
+    @include font16;
+    color: $color-dark-grey;
+  }
+}
+
+.container-popular-cities-categories {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  p {
+    @include font20;
+    text-align: center;
+  }
+}
+
+.container-how-meetup-works {
+  margin-top: 64px;
+  h2 {
+    @include font28;
+  }
+}
+
+.how-meetup-works-container {
+  display: flex;
+  gap: 32px;
+}
+
+.how-meetup-works-container-content {
+  margin-top: 24px;
+  display: flex;
+  max-width: 580px;
+  min-width: 400px;
+  width: 50%;
+  height: 180px;
+  background-color: $color-light-green;
+  padding-top: 32px;
+  padding-left: 24px;
+  gap: 32px;
+  border-radius: $border-radius;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h3 {
+      @include font20;
+    }
+    p {
+      @include font16;
+    }
+    a {
+      color: $color-button-green;
+    }
+  }
+}
+
+.container-friendships {
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  h2 {
+    @include font28;
+  }
+  p {
+    @include font16;
+    color: $color-dark-grey;
+  }
+}
+
+.container-friendships-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 32px;
+  flex-wrap: wrap;
+  div {
+    cursor: pointer;
+    max-width: 370px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    h2 {
+      @include font20;
+    }
+    p {
+      @include font16;
+      color: $color-dark-grey;
+    }
+    a {
+      color: $color-button-green;
+    }
+  }
+}
+
+.footer-container {
+  margin-top: 40px;
+  max-width: calc($container-width + 316px + ($container-padding) * 2);
+  background-color: $color-dark;
+  height: 559px;
+  a {
+    @include font14;
+    color: $color-light-grey;
+  }
+
+  h3 {
+    @include font16;
+    color: $color-light;
+  }
+
+  p {
+    @include font16;
+    color: $color-light;
+  }
+}
+
+.footer-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  height: 10%;
+  padding-block: 40px;
+}
+
+.get-started {
+  border: 2px solid $color-light;
+  border-radius: 6px;
+  padding-inline: 14px;
+  padding-block: 6px;
+}
+
+.footer-content {
+  border-top: 1px solid $color-dark-grey;
+  display: flex;
+  justify-content: flex-start;
+  height: 57%;
+  gap: 26%;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 32px;
+  }
+}
+
+.footer-logo-img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.footer-logo-img-big {
+  width: 135px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.footer-logo {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 55%;
+  height: 10%;
+  div {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+.footer-end {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4%;
+  height: 10%;
+}
+
+@media screen and (max-width: 1030px) {
+  .header-menu-search-right {
+    display: none;
+  }
+  .container-events-near-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .container-online-events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .explore-top-categories {
+    justify-content: flex-start;
+  }
+
+  .footer-logo-img-big {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .header-menu-left {
+    position: absolute;
+    top: 7%;
+    left: 3%;
+  }
+
+  .header-menu-right {
+    width: 80%;
+  }
+  .container-join-meetup-left {
+    h1 {
+      @include font25;
+    }
+  }
+  .container-join-meetup-left {
+    h1 {
+      @include font25;
+    }
+    p {
+      @include font12;
+    }
+  }
+
+  .header-menu-right {
+    a {
+      @include font12;
+    }
+  }
+
+  .container-join-meetup-right {
+    img {
+      width: 215px;
+      height: 152px;
+    }
+  }
+  .container-join-meetup {
+    height: 430px;
+  }
+
+  .see-all {
+    display: none;
+  }
+
+  .container-events-near-grid {
+    place-items: normal;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  .container-online-events-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .grid-item {
+    flex-direction: row;
+    padding-top: 20px;
+    border-top: 1px solid $color-dark-grey;
+  }
+
+  .margin-header {
+    margin-top: 60px;
+  }
+
+  .events-title {
+    @include font20;
+  }
+
+  .container-popular-cities-categories {
+    div {
+      img {
+        width: 153px;
+        height: 153px;
+      }
+    }
+    div:nth-last-child(1) {
+      display: none;
+    }
+  }
+
+  .how-meetup-works-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    div {
+      gap: 10px;
+    }
+  }
+
+  .how-meetup-works-container-content {
+    height: 112px;
+    padding-top: 19px;
+    padding-left: 14px;
+    div {
+      h3 {
+        @include font16;
+        font-weight: bold;
+      }
+      p {
+        @include font12;
+      }
+      a {
+        @include font12;
+        color: $color-button-green;
+      }
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .container-friendships {
+    h2 {
+      @include font20;
+    }
+  }
+
+  .container-friendships-p {
+    display: none;
+  }
+
+  .container-friendships-content {
+    justify-content: center;
+    div {
+      max-width: 100%;
+      h3 {
+        @include font16;
+        font-weight: bold;
+      }
+      p {
+        @include font12;
+      }
+      a {
+        @include font12;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .grid-item {
+    height: 100px;
+    img {
+      width: 165px;
+      height: 92px;
+    }
+    .grid-item-text {
+      gap: 5px;
+    }
+
+    h2 {
+      @include font16;
+    }
+    p {
+      @include font12;
+      img {
+        width: 16px;
+        height: auto;
+      }
+    }
+  }
+  .new-container-join-meetup {
+    position: relative;
+    flex-direction: column;
+    height: 340px;
+    img {
+      position: absolute;
+      width: 238px;
+      height: 136px;
+      left: 20%;
+      top: 60px;
+    }
+  }
+  .new-container-join-meetup-left {
+    align-items: center;
+    width: 100%;
+    P {
+      text-align: left;
+      margin-top: 140px;
+    }
+    h2 {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  .footer-end{
+    a{
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .container-join-meetup {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 400px;
+    height: 370px;
+    gap: 20px;
+    padding-inline: 0;
+  }
+  .container-join-meetup-left {
+    button {
+      display: none;
+    }
+  }
+
+  .events-title {
+    @include font20;
+  }
+
+  .location {
+    span {
+      @include font14;
+    }
+  }
+
+  .container-join-meetup-left {
+    width: 100%;
+  }
+
+  .container-join-meetup-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .new-container-join-meetup-left {
+    button {
+      display: block;
+    }
+  }
+
+  .explore-top-categories {
+    justify-content: center;
+  }
+}
