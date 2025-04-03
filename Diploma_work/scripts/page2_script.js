@@ -66,19 +66,28 @@ const root = document.getElementById("root");
 
 selectType.addEventListener("change", () => {
     filterEvents(selectType.value, "type");
+    selectDistance.selectedIndex = 0;
+    selectCategory.selectedIndex = 0;
 });
 selectDistance.addEventListener("change", () => {
     filterEvents(selectDistance.value, "distance");
+    selectType.selectedIndex = 0;
+    selectCategory.selectedIndex = 0;
 });
 selectCategory.addEventListener("change", () => {
     filterEvents(selectCategory.value, "category");
+    selectType.selectedIndex = 0;
+    selectDistance.selectedIndex = 0;
 });
 
-function firstWord(text) {
+function firstWord(text, eventType) {
+    if (eventType === "distance") {
     return text.match(/\b\w+\b/)[0]; 
-}
+} else {
+    return text;
+}}
 function filterEvents(value, eventType) {
-    const eventValue = firstWord(value);
+    const eventValue = firstWord(value, eventType);
     console.log(eventValue);
     console.log(eventType);
     const filteredEvents = eventsStore.filter(event => {

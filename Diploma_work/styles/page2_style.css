@@ -537,8 +537,7 @@ body {
   gap: 18px;
 }
 
-.custom-select, .custom-select::picker(select) {
-  appearance: base-select;
+.custom-select {
   width: 190px;
   height: 46px;
   font-size: 0.875rem;
@@ -546,11 +545,10 @@ body {
   font-weight: 500;
   font-weight: bold;
   border-radius: 40px;
-  border: 1px solid #f6f7f8;
+  border: 15px solid #f6f7f8;
   background-color: #f6f7f8;
   cursor: pointer;
   text-align: center;
-  appearance: none;
 }
 
 .root-container-left {
