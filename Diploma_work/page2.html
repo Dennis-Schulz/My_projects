@@ -1,118 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="./scripts/page2_script.js"></script>
-    <link rel="stylesheet" href="styles/page2_style.css">
+    <link rel="stylesheet" href="styles/page2_style.css" />
     <title>Diploma_work_page2</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header container">
-        <a href="/" class="header-logo">
+      <a href="/" class="header-logo">
+        <img
+          src="./images/logo.png"
+          alt="meetup-logo"
+          class="header-logo-image"
+          width="95"
+          height="34"
+          loading="lazy"
+        />
+      </a>
+      <div class="header-menu-left">
+        <input
+          type="text"
+          class="header-menu-search-left"
+          placeholder="Search events"
+        />
+        <input
+          type="text"
+          class="header-menu-search-right"
+          placeholder="Mountain View, CA"
+        />
+        <button class="header-menu-search-button">
           <img
-            src="./images/logo.png"
-            alt="meetup-logo"
-            class="header-logo-image"
-            width="95"
-            height="34"
+            src="./icons/search.png"
+            alt="search-icon"
+            width="15"
+            height="15"
             loading="lazy"
           />
-        </a>
-        <div class="header-menu-left">
-          <input
-            type="text"
-            class="header-menu-search-left"
-            placeholder="Search events"
+        </button>
+      </div>
+      <div class="header-menu-right">
+        <a href="/" class="header-menu-link">
+          <img
+            src="./icons/language.png"
+            alt="language-icon"
+            width="17"
+            height="17"
+            loading="lazy"
           />
-          <input
-            type="text"
-            class="header-menu-search-right"
-            placeholder="Mountain View, CA"
-          />
-          <button class="header-menu-search-button">
-            <img
-              src="./icons/search.png"
-              alt="search-icon"
-              width="15"
-              height="15"
-              loading="lazy"
-            />
-          </button>
-        </div>
-        <div class="header-menu-right">
-          <a href="/" class="header-menu-link">
-            <img
-              src="./icons/language.png"
-              alt="language-icon"
-              width="17"
-              height="17"
-              loading="lazy"
-            />
-            English</a
-          >
-          <a href="/" class="header-menu-link">Log in</a>
-          <a href="/" class="header-menu-link">Sign up</a>
-        </div>
-      </header>
-      <main>
-        
-      </main>
-      <footer class="footer-container container">
-        <div class="footer-start container">
-          <p>Create your own Meetup group.</p>
-          <p class="get-started">Get Started</p>
-        </div>
-        <div class="footer-content container">
-          <div>
-            <H3>Your Account</H3>
-            <a href="#">Sign up</a>
-            <a href="#">Log in</a>
-            <a href="#">Help</a>
-            <a href="#">Become an Affiliate</a>
+          English</a
+        >
+        <a href="/" class="header-menu-link">Log in</a>
+        <a href="/" class="header-menu-link">Sign up</a>
+      </div>
+    </header>
+    <main>
+      <div class="root-container container">
+        <div class="root-container-left">
+          <h2>Events near New York, NY</h2>
+          <a href="#">Events</a>
+          <div class="root-container-select">
+            <select class="custom-select" id="type">
+              <option disabled selected>Any tape</option>
+              <option>Online</option>
+              <option>Offline</option>
+            </select>
+            <select class="custom-select" id="distance">
+              <option disabled selected>Any distance</option>
+              <option>5 km</option>
+              <option>10 km</option>
+              <option>15 km</option>
+              <option>25 km</option>
+              <option>50 km</option>
+              <option>75 km</option>
+              <option>100 km</option>
+            </select>
+            <select class="custom-select" id="category">
+              <option disabled selected>Any category</option>
+              <option>Social Activities</option>
+              <option>Hobbies and Passions</option>
+              <option>Health and Wellbeing</option>
+              <option>Business</option>
+              <option>Technology</option>
+            </select>
           </div>
-          <div>
-            <h3>Discover</h3>
-            <a href="#">Groups</a>
-            <a href="#">Calendar</a>
-            <a href="#">Topics</a>
-            <a href="#">Cities</a>
-            <a href="#">Online Events</a>
-            <a href="#">Local Guides</a>
-            <a href="#">Make Friends</a>
-          </div>
-          <div>
-            <h3>Meetup</h3>
-            <a href="#">About</a>
-            <a href="#">Blog</a>
-            <a href="#">Meetup Pro</a>
-            <a href="#">Careers</a>
-            <a href="#">Apps</a>
-            <a href="#">Podcast</a>
+          <div class="root" id="root">
+            
           </div>
         </div>
-        <h3 class="container">Follow us</h3>
-        <div class="footer-logo container">
-          <div>
-            <img class="footer-logo-img" src="images/facebook.png" alt="picture">
-            <img class="footer-logo-img" src="images/twitter.png" alt="picture">
-            <img class="footer-logo-img" src="images/youtube.png" alt="picture">
-            <img class="footer-logo-img" src="images/instagram.png" alt="picture">
-            <img class="footer-logo-img" src="images/tic-toc.png" alt="picture">
-          </div>
-          <div>
-            <img class="footer-logo-img-big" src="images/Google.png" alt="picture">
-            <img class="footer-logo-img-big" src="images/App Store.png" alt="picture">
-          </div>
+        <div class="root-container-right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.0506281772!2d-74.30917063299817!3d40.6971933466018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sde!4v1743666065001!5m2!1sru!2sde"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-        <div class="footer-end container">
-          <p>© 2024 Meetup</p>
-          <a href="#">Terms of Service</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Do Not Sell or Share My Personal Data</a>
-          <a href="#">Cookie Policy</a>
+      </div>
+    </main>
+    <footer class="footer-container container">
+      <div class="footer-start container">
+        <p>Create your own Meetup group.</p>
+        <p class="get-started">Get Started</p>
+      </div>
+      <div class="footer-content container">
+        <div>
+          <h3>Your Account</h3>
+          <a href="#">Sign up</a>
+          <a href="#">Log in</a>
           <a href="#">Help</a>
+          <a href="#">Become an Affiliate</a>
         </div>
-        </footer>
-</body>
+        <div>
+          <h3>Discover</h3>
+          <a href="#">Groups</a>
+          <a href="#">Calendar</a>
+          <a href="#">Topics</a>
+          <a href="#">Cities</a>
+          <a href="#">Online Events</a>
+          <a href="#">Local Guides</a>
+          <a href="#">Make Friends</a>
+        </div>
+        <div>
+          <h3>Meetup</h3>
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Meetup Pro</a>
+          <a href="#">Careers</a>
+          <a href="#">Apps</a>
+          <a href="#">Podcast</a>
+        </div>
+      </div>
+      <h3 class="container">Follow us</h3>
+      <div class="footer-logo container">
+        <div>
+          <img
+            class="footer-logo-img"
+            src="images/facebook.png"
+            alt="picture"
+          />
+          <img class="footer-logo-img" src="images/twitter.png" alt="picture" />
+          <img class="footer-logo-img" src="images/youtube.png" alt="picture" />
+          <img
+            class="footer-logo-img"
+            src="images/instagram.png"
+            alt="picture"
+          />
+          <img class="footer-logo-img" src="images/tic-toc.png" alt="picture" />
+        </div>
+        <div>
+          <img
+            class="footer-logo-img-big"
+            src="images/Google.png"
+            alt="picture"
+          />
+          <img
+            class="footer-logo-img-big"
+            src="images/App Store.png"
+            alt="picture"
+          />
+        </div>
+      </div>
+      <div class="footer-end container">
+        <p>© 2024 Meetup</p>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Do Not Sell or Share My Personal Data</a>
+        <a href="#">Cookie Policy</a>
+        <a href="#">Help</a>
+      </div>
+    </footer>
+  </body>
 </html>

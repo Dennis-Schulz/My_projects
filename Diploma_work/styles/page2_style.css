@@ -527,6 +527,109 @@ body {
   height: 10%;
 }
 
+.root-container {
+  margin-top: 80px;
+  display: flex;
+}
+
+.root-container-select {
+  display: flex;
+  gap: 18px;
+}
+
+.custom-select, .custom-select::picker(select) {
+  appearance: base-select;
+  width: 190px;
+  height: 46px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  font-weight: bold;
+  border-radius: 40px;
+  border: 1px solid #f6f7f8;
+  background-color: #f6f7f8;
+  cursor: pointer;
+  text-align: center;
+  appearance: none;
+}
+
+.root-container-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.root-container-left h2 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+}
+.root-container-left a {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color: #00798A;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.card {
+  margin-top: 15px;
+  border-top: 1px solid #C5C4C4;
+  max-width: 604px;
+  width: 100%;
+  padding-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+.card img {
+  width: 170px;
+  height: 110px;
+  border-radius: 8px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-text-date {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #7C6F50;
+}
+
+.card-text-title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+.card-text-distance {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #707070;
+}
+
+.card-text-atendees {
+  margin-top: 40px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #707070;
+}
+
+.root-container-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media screen and (max-width: 1030px) {
   .header-menu-search-right {
     display: none;

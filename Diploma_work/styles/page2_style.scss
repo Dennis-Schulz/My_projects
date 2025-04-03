@@ -441,6 +441,99 @@ body {
   height: 10%;
 }
 
+.root-container {
+  margin-top: 80px;
+  display: flex;
+}
+
+.root-container-select {
+  display: flex;
+  gap: 18px;
+}
+
+.custom-select {
+  &,
+  &::picker(select) {
+    appearance: base-select;
+    width: 190px;
+    height: 46px;
+    @include font14;
+    font-weight: bold;
+    border-radius: 40px;
+    border: 1px solid #f6f7f8;
+    background-color: #f6f7f8;
+    cursor: pointer;
+    text-align: center;
+    appearance: none;;
+  }
+}
+
+.root-container-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  h2{
+    @include font28;
+  }
+  a{
+    @include font20;
+    color: $color-button-green;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.root {
+}
+
+.card {
+  margin-top: 15px;
+  border-top: 1px solid $color-light-grey;
+  max-width: 604px;
+  width: 100%;
+  padding-top: 16px;
+  display: flex;
+  gap: 12px;
+  img {
+    width: 170px;
+    height: 110px;
+    border-radius: $border-radius;
+  }
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-text-date {
+  @include font14;
+  color: $color-brown;
+}
+.card-text-title {
+  @include font16;
+  font-weight: bold;
+}
+.card-text-distance {
+  @include font14;
+  color: $color-dark-grey;
+}
+
+.card-text-atendees {
+  margin-top: 40px;
+  @include font14;
+  color: $color-dark-grey;
+}
+
+.root-container-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media screen and (max-width: 1030px) {
   .header-menu-search-right {
     display: none;
@@ -653,8 +746,8 @@ body {
     }
   }
 
-  .footer-end{
-    a{
+  .footer-end {
+    a {
       display: none;
     }
   }
