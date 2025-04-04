@@ -64,50 +64,60 @@ const selectDistance = document.getElementById("distance");
 const selectCategory = document.getElementById("category");
 const root = document.getElementById("root");
 
+let distanceValue, categoryValue, typeValue = null;
+
+
 selectType.addEventListener("change", () => {
     filterEvents(selectType.value, "type");
-    selectDistance.selectedIndex = 0;
-    selectCategory.selectedIndex = 0;
 });
 selectDistance.addEventListener("change", () => {
     filterEvents(selectDistance.value, "distance");
-    selectType.selectedIndex = 0;
-    selectCategory.selectedIndex = 0;
 });
 selectCategory.addEventListener("change", () => {
     filterEvents(selectCategory.value, "category");
-    selectType.selectedIndex = 0;
-    selectDistance.selectedIndex = 0;
 });
 
 function firstWord(text, eventType) {
     if (eventType === "distance") {
-    return text.match(/\b\w+\b/)[0]; 
-} else {
-    return text;
-}}
+        return text.match(/\b\w+\b/)[0];
+    } else {
+        return text;
+    }
+}
+
 function filterEvents(value, eventType) {
-    const eventValue = firstWord(value, eventType);
-    console.log(eventValue);
-    console.log(eventType);
+    if (eventType === "distance" && value !== "Any distance") {
+        distanceValue = firstWord(value, eventType)
+    } else if (eventType === "distance" && value === "Any distance") {
+        distanceValue = null;
+    };
+    if (eventType === "category" && value !== "Any category") {
+        categoryValue = firstWord(value, eventType)
+    } else if (eventType === "category" && value === "Any category") {
+        categoryValue = null;
+    };
+    if (eventType === "type" && value !== "Any type") {
+        typeValue = firstWord(value, eventType)
+    } else if (eventType === "type" && value === "Any type") {
+        typeValue = null;
+    };
+
+    console.log(distanceValue, categoryValue, typeValue);
     const filteredEvents = eventsStore.filter(event => {
-        if (eventType === "type") {
-            return event.type === eventValue;
-        } else if (eventType === "distance") {
-            return event.distance <= eventValue;
-        } else if (eventType === "category") {
-            return event.category === eventValue;
-        }
-    })
+        return (
+            (typeValue ? event.type === typeValue : true) &&
+            (distanceValue ? event.distance <= distanceValue : true) &&
+            (categoryValue ? event.category === categoryValue : true)
+        );
+    });
     renderEvents(filteredEvents);
 }
 
 function renderEvents(events) {
-    
     let attendees;
     root.innerHTML = "";
     events.forEach(event => {
-        if (event.attendees === undefined){
+        if (event.attendees === undefined) {
             attendees = "";
         } else {
             attendees = event.attendees + " attendees";
