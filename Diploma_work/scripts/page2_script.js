@@ -64,50 +64,36 @@ const selectDistance = document.getElementById("distance");
 const selectCategory = document.getElementById("category");
 const root = document.getElementById("root");
 
-let distanceValue, categoryValue, typeValue = null;
+let distanceValue = null;
+let categoryValue = null;
+let typeValue = null;
 
 
 selectType.addEventListener("change", () => {
     filterEvents(selectType.value, "type");
 });
 selectDistance.addEventListener("change", () => {
-    filterEvents(selectDistance.value, "distance");
+    filterEvents(selectDistance.value.split(" ")[0], "distance");
 });
 selectCategory.addEventListener("change", () => {
     filterEvents(selectCategory.value, "category");
 });
 
-function firstWord(text, eventType) {
-    if (eventType === "distance") {
-        return text.match(/\b\w+\b/)[0];
-    } else {
-        return text;
-    }
-}
 
 function filterEvents(value, eventType) {
-    if (eventType === "distance" && value !== "Any distance") {
-        distanceValue = firstWord(value, eventType)
-    } else if (eventType === "distance" && value === "Any distance") {
-        distanceValue = null;
-    };
-    if (eventType === "category" && value !== "Any category") {
-        categoryValue = firstWord(value, eventType)
-    } else if (eventType === "category" && value === "Any category") {
-        categoryValue = null;
-    };
-    if (eventType === "type" && value !== "Any type") {
-        typeValue = firstWord(value, eventType)
-    } else if (eventType === "type" && value === "Any type") {
-        typeValue = null;
-    };
+   
+    if (eventType === "distance") {
+        distanceValue = value} else   
+    if (eventType === "category") {
+        categoryValue = value} else    ;
+    if (eventType === "type") {
+        typeValue = value} 
 
-    console.log(distanceValue, categoryValue, typeValue);
     const filteredEvents = eventsStore.filter(event => {
         return (
-            (typeValue ? event.type === typeValue : true) &&
-            (distanceValue ? event.distance <= distanceValue : true) &&
-            (categoryValue ? event.category === categoryValue : true)
+            (!typeValue || typeValue === "Any type" || event.type === typeValue) &&
+            (!distanceValue || distanceValue === "Any" || event.distance <= distanceValue) &&
+            (!categoryValue || categoryValue === "Any category" || event.category === categoryValue)
         );
     });
     renderEvents(filteredEvents);
