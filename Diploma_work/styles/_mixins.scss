@@ -4,6 +4,19 @@
     align-items: center;
 }
 
+@mixin font8{
+    font-size: 0.5rem;
+    line-height: 0.688rem;
+    font-weight: 400;
+}
+
+@mixin font10{
+    font-size: 0.625rem;
+    line-height: 0.813rem;
+    font-weight: 400;
+}
+
+
 @mixin font12{
     font-size: 0.75rem;
     line-height: 1.063rem;

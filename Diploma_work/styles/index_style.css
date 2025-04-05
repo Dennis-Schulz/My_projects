@@ -743,8 +743,21 @@ body {
     gap: 20px;
     padding-inline: 0;
   }
+  .container-join-meetup-left, .new-container-join-meetup-left {
+    position: relative;
+  }
   .container-join-meetup-left button, .new-container-join-meetup-left button {
-    display: none;
+    position: absolute;
+    bottom: -220px;
+    right: 40%;
+    width: 100px;
+    height: 30px;
+    font-size: 0.75rem;
+    line-height: 1.063rem;
+    font-weight: 400;
+  }
+  .container-events-near-header {
+    margin-top: 70px;
   }
   .events-title {
     font-size: 1.25rem;

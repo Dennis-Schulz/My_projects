@@ -670,10 +670,21 @@ body {
     gap: 20px;
     padding-inline: 0;
   }
-  .container-join-meetup-left {
+
+   .container-join-meetup-left {
+    position: relative;
     button {
-      display: none;
+      position: absolute;
+      bottom: -220px;
+      right: 40%;
+      width: 100px;
+      height: 30px;
+      @include font12;
     }
+  }
+
+  .container-events-near-header{
+    margin-top: 70px;
   }
 
   .events-title {
