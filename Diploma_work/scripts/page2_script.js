@@ -64,9 +64,9 @@ const selectDistance = document.getElementById("distance");
 const selectCategory = document.getElementById("category");
 const root = document.getElementById("root");
 
-let distanceValue = null;
-let categoryValue = null;
-let typeValue = null;
+let distanceValue = "Any";
+let categoryValue = "Any category";
+let typeValue = "Any type";
 
 
 selectType.addEventListener("change", () => {
@@ -81,7 +81,6 @@ selectCategory.addEventListener("change", () => {
 
 
 function filterEvents(value, eventType) {
-   
     if (eventType === "distance") {
         distanceValue = value} else   
     if (eventType === "category") {
@@ -91,9 +90,9 @@ function filterEvents(value, eventType) {
 
     const filteredEvents = eventsStore.filter(event => {
         return (
-            (!typeValue || typeValue === "Any type" || event.type === typeValue) &&
-            (!distanceValue || distanceValue === "Any" || event.distance <= distanceValue) &&
-            (!categoryValue || categoryValue === "Any category" || event.category === categoryValue)
+            (typeValue === "Any type" || event.type === typeValue) &&
+            (distanceValue === "Any" || event.distance <= distanceValue) &&
+            (categoryValue === "Any category" || event.category === categoryValue)
         );
     });
     renderEvents(filteredEvents);
