@@ -232,7 +232,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 15px;
   div {
     cursor: pointer;
     margin-top: 24px;
@@ -664,7 +664,7 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    width: 400px;
+    width: 450px;
     height: 370px;
     gap: 20px;
     padding-inline: 0;
@@ -736,5 +736,27 @@ body {
   .container-join-meetup{
     padding-left: 15px;
     margin-inline: 0px;
+  }
+
+  .explore-top-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+
+  .container-explore-top-categories{
+    margin-top: 30px;
+  }
+
+  .container-popular-cities{
+    margin-top: 30px;
+  }
+
+  .container-how-meetup-works{
+    margin-top: 30px;
+  }
+
+  .container-friendships{
+    margin-top: 30px;
   }
 }
