@@ -2,6 +2,8 @@ const board = document.getElementById("board");
 const cells = document.querySelectorAll(".cell");
 const newGameButton = document.querySelector(".new-game");
 const winMessage = document.createElement("div");
+const visible1player = document.getElementById("player1");
+const visible2player = document.getElementById("player2");
 const player1 = "✖️";
 const player2 = "⭕";
 let currentPlayer = player1;
@@ -33,20 +35,23 @@ function checkWin() {
 
 cells.forEach(cell => {
     cell.addEventListener("click", () => {
-        if (win) {
+        if (win || cell.textContent !== "") {
             return;
         }
         if (cell.textContent === "") {
             cell.textContent = currentPlayer;
             if (currentPlayer === player1) {
                 currentPlayer = player2;
-                checkWin();
+                visible2player.classList.remove("visible");
+                visible1player.classList.add("visible");
                 cell.style.color = "red";
             } else {
                 currentPlayer = player1;
-                checkWin();
+                visible1player.classList.remove("visible");
+                visible2player.classList.add("visible");
                 cell.style.color = "blue";
             }
+            checkWin();
         }
     });
 });
@@ -58,11 +63,23 @@ newGameButton.addEventListener("click", () => {
         cell.style.background = "white";
         winMessage.textContent = "";
     });
-    currentPlayer = player1;
+    currentPlayer =  Math.random() < 0.5 ? player1 : player2;
+    if (currentPlayer === player1) {
+        visible2player.classList.add("visible");
+        visible1player.classList.remove("visible");
+    } else {
+        visible1player.classList.add("visible");
+        visible2player.classList.remove("visible");
+    }
     win = false;
 });
 
 function renderWin() {
+    if (currentPlayer === player1) {
+        currentPlayer = player2;
+    } else {
+        currentPlayer = player1;
+    }
     winMessage.textContent = `Player ${currentPlayer} wins!`;
     winMessage.style.fontSize = "2rem";
     winMessage.style.fontWeight = "bold";

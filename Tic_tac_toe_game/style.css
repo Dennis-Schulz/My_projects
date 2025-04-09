@@ -17,11 +17,11 @@ body{
 .menu{
     margin-top: 30px;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    width: 500px;
+    justify-content: center;
+    align-items: center;;
+    width: 450px;
     height: 100px;
+    gap: 30px;
     border: 1px solid black;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
 }
@@ -60,4 +60,23 @@ body{
     background-color: #2b9f2b;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
 }
+
+#player1, #player2{
+    font-size: 70px;
+}
+
+.moves{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    font-size: 30px;
+}
+
+.visible{
+    opacity: 0.1;
+    transition: all 0.2s ease-in-out;
+}
+
 
