@@ -86,6 +86,7 @@ selectDistance.addEventListener("change", () => {
         typeValue = "Offline";
     } else {
             selectType.value = "Any type";
+            typeValue = "Any type";
             selectType.disabled = false;
     }
 
