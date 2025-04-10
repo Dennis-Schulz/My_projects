@@ -52,9 +52,17 @@ cells.forEach(cell => {
                 cell.style.color = "blue";
             }
             checkWin();
+            checkDraw();
         }
     });
 });
+
+function checkDraw() {
+    const isDraw = [...cells].every(cell => cell.textContent !== "");
+    if (isDraw && !win) {
+        renderDraw();
+    }
+}
 
 newGameButton.addEventListener("click", () => {
     cells.forEach(cell => {
@@ -84,5 +92,13 @@ function renderWin() {
     winMessage.style.fontSize = "2rem";
     winMessage.style.fontWeight = "bold";
     winMessage.style.color = "green";
+    document.body.appendChild(winMessage);
+}
+
+function renderDraw() {
+    winMessage.textContent = "Draw!";
+    winMessage.style.fontSize = "2rem";
+    winMessage.style.fontWeight = "bold";
+    winMessage.style.color = "black";
     document.body.appendChild(winMessage);
 }
