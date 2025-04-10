@@ -134,6 +134,18 @@ function renderEvents(events) {
             hour: "2-digit",
             minute: "2-digit",
         });
+        if (event.type === "Online") {
+            card.innerHTML = `
+              <img src="${event.image}" alt="picture">
+              <div class="card-text">
+                <p class="card-text-date">${formattedDate}</p>
+                <h3 class="card-text-title">${event.title}</h3>
+                <p class="card-text-distance">${event.category}</p>
+                <p class="card-text-atendees">${attendees}</p>
+              </div>
+        `
+            root.appendChild(card);
+        } else {
         card.innerHTML = `
               <img src="${event.image}" alt="picture">
               <div class="card-text">
@@ -143,7 +155,7 @@ function renderEvents(events) {
                 <p class="card-text-atendees">${attendees}</p>
               </div>
         `
-        root.appendChild(card);
+        root.appendChild(card);}
     });
 }
 
