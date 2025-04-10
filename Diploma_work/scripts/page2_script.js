@@ -70,9 +70,25 @@ let typeValue = "Any type";
 
 
 selectType.addEventListener("change", () => {
+    if (selectType.value === "Online") {
+        selectDistance.value = "Any distance";
+        distanceValue = "Any";
+        selectDistance.disabled = true;
+    } else {
+            selectDistance.disabled = false;
+        }
     filterEvents(selectType.value, "type");
 });
 selectDistance.addEventListener("change", () => {
+    if (selectDistance.value !== "Any distance") {
+        selectType.value = "Offline";
+        selectType.disabled = true;
+        typeValue = "Offline";
+    } else {
+            selectType.value = "Any type";
+            selectType.disabled = false;
+    }
+
     filterEvents(selectDistance.value.split(" ")[0], "distance");
 });
 selectCategory.addEventListener("change", () => {
