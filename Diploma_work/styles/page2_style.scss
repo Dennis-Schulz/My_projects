@@ -55,7 +55,7 @@ body {
 }
 
 .header-menu-search-button {
-  height: $input-height + 4px;
+  height: $input-height;
   width: $input-height;
   border-radius: 0 $border-radius $border-radius 0;
   background: #f65858;
